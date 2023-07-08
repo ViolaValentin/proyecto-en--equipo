@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    background-color: #21374B;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.texto{
+    background-color: #FAEBD7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+}
+.sect-azul{
+    background-color: #21374B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    font-size: 30px;
+    padding: 10px;
+    margin: 20px;
+}
+.color-piel{
+    background-color: #FAEBD7;
+    height: 400px;
+}
+.info{
+    background-color: #21374B;
+    height: 100px;
+    display: flex;
+    margin-top: 20px;
+    
+}

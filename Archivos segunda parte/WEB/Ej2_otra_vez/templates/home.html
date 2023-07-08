@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/home.css')}}">
+    <title>Ejercicio semáforo</title>
+</head>
+<body>
+    <div class="contenedor-verde">
+        <section class="header">
+            <div class="semaforo">
+                <div class="circulo-rojo"></div>
+                <div class="circulo-amarillo"></div>
+                <div class="circulo-verde"></div>
+            </div>
+            <img src="" alt="">
+        </section>
+        <section class="body">
+            <h2>EN UN CLICK</h2>
+            <h1>LIBRERIA</h1>
+            <button>BUSCAR</button>
+            <img src="{{url_for('get_all_products', id=id)}}" alt="">
+        </section>
+    </div>
+</body>
+</html>

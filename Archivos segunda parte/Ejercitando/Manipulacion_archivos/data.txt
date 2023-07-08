@@ -1,0 +1,563 @@
+Fundamentos de informática
+
+Temas para el examen:
+Todos los temas que están en Python intro: https://github.com/AJVelezRueda/Fundamentos_de_informatica/tree/master/Python_intro
+Y Programación orientada a objetos → Carpeta POO 
+(https://github.com/AJVelezRueda/Fundamentos_de_informatica/tree/master/POO)
+Pasar info de este docs: https://docs.google.com/document/d/1-ERGmC6hmNh7mo_4Sz2K_Z9Kqpq8pOmGd__KQqHnkoI/edit#heading=h.8lkqqrhx9wts
+Clase 1 - teórica - 13/3
+Profesor Titular: Dra. Ana Julia Velez 
+E-mail: anavelezrueda@gmail.com
+
+Profesor Ayudante: Lic. Guillermo Ignacio Benítez
+E-mail: guillermo.benitez08@gmail.com
+
+Links:
+
+github.com/WomenBioinfoDataScla
+
+flbulgarelli.github.io/recursos-python
+
+www.github.com/Ajvelezrueda
+
+
+Clase 2 - teorica - 20/3
+Scrip es un archivo .py
+
+Un script (en español: guion) es básicamente un conjunto de instrucciones ordenadas, que buscan resolver una tarea específica
+
+Son útiles para automatizar tareas que se ejecutan periódicamente (también conocidas como tareas programadas o calendarizadas) o automatizar situaciones tediosas 
+
+Antes de correr el script hay que guardarlo (te das cuenta con el puntito blanci)
+
+Son códigos de vía rápida
+
+Se ejecuta contra el intérprete de un lenguaje nuestro caso Phyton 
+
+Comandos útiles: (se usan en la terminal )
+
+ls: lista de archivos de un directorio 
+cd: cambio de directorio →ej cd Documents/
+pwd: muestra el path del directorio  en el que estoy
+>>> eso te dice que estas en Python
+Comandos basicos de Linux (https://ucema.edu.ar/webcampus3/pluginfile.php/173040/mod_resource/content/1/Comandos%20b%C3%A1sicos%20terminal%20Linux.pdf)
+
+Buenas prácticas para buscar archivos
+NO poner nombres de archivos con espacio (ej: nombre_unacosa.py) (snake case)
+
+Atajos útiles de de vsc:
+ctr + s → guardar 
+ctr + j → abrir/cerrar terminal 
+ctr + d → selector multiple
+ctr + a → selecciona todo
+ctr + j → ejecutar el código
+
+Variable asignar un espacio a la memoria un tipo de dato, un pedazo de información 
+
+Es DISTINTO a un ARGUMENTO, debido a su alcance, está limitado a la función, no se guarda en la memoria 
+
+
+Extensión define el lenguaje del lenguaje (.py)
+
+Python tiene funciones built-in, por ej print
+ 
+Bibliotecas: 
+
+OS (operational system) es una librería que sirve para manipular archivos, moverlos, DIALOGA con el sistema operativo, con la terminal.
+
+os.listdir() → nos permite hacer lista de archivos
+
+SYS (system) también dialoga y toma parámetros que le pasamos desde el script en la terminal
+
+IMPORTANTE SABER MANEJAR ARCHIVOS
+
+2 TIPOS DE ARCHIVOS para Python
+
+El que puede ejecutar → biblioteca os 
+El que puede leer → hay varias formas de leerlo 
+
+Abrir archivos → open(path_al_archivo, modo)
+
+Apertura de archivos
+Para abrir un archivo de texto, ya sea para usarlo o escribir en él, podemos usar la función nativa de Python open():
+open(path_al_archivo, modo)
+Donde:
+- "path_al_archivo" es un objeto de tipo str que indica la ruta en la que se encuentra el archivo. 
+
+- "modo" es un objeto de tipo str que indica la forma en la que Python accederá al archivo en cuestión.
+Podés encontrar en la siguiente tabla algunos de los modos de lectura más frecuentes y sus diferencias:
+
+
+Rutas/path:
+Absolutas → La ruta desde el directorio raíz
+Relativas → Desde el directorio de trabajo → ./Doc/hola.txt
+La diferencia PRINCIPAL es que en un absoluto está el usuario de la computadora y si se lo pasas a alguien el código se rompe. USAR los relativos. 
+Clase 3 - teórica - 27/3
+
+NUNCA renombrar archivos con palabras reservadas o con nombres de librerías
+with open sirve para abrir los archivos de forma segura y así evitar tener que poner el close (por si nos olvidamos)
+PATH → es la ruta del archivo desde el directorio raíz
+Home/User =  ~
+Control de Versiones
+Es un software que nos va a permitir hacer un seguimiento de nuestros proyectos → GitHub
+
+
+Git pull → Baja los cambios de un proyecto a mi computadora local. Siempre hay antes de arrancar hay que hacer un GIT PULL
+Git add → incorporar los cambios
+Git commit → sacar foto 
+Registra “metadata” y todos los cambios del código
+Se le debe asociar un mensaje → git commit -m “mensaje que explique de qué se trata ese msj” 
+Git push → sube el proyecto/los cambios (depende el momento en el que esté el código) a la web. Siempre antes de irme HAY QUE HACER UN GIT PUSH
+Pasos para usar github:
+usuario de github
+vincular mi cuenta a mi computadora (clave ssh)
+Git clone → bajar un repositorio por 1ra vez 
+Un repositorio es un directorio cualquiera que tiene toda la metadata/toda la info de mi proyecto 
+Pasos:
+git add .
+git commit -m “add exercises”
+git push
+~ = home/user
+Clonar 
+Git 
+Crear repo
+Copiar ssh
+Clonar
+Poner los tps anteriores en la carpeta
+En la terminal parado en la carpeta del repositorio que acabo de clonar 
+Git add .
+Git commit -m “add exercises”
+Git push
+Clase 2 - practica - 29/3
+Teoría: https://github.com/AJVelezRueda/Fundamentos_de_informatica/blob/master/Python_intro/Practicas/Teor%C3%ADa_suplementaria.md
+Rutas
+movimiento de carpetas
+ cd .. (ir una carpeta atrás)
+cd ../../  (ir dos carpeta atrás)
+
+Es para usarlo en PYTHON: 
+os.mkdir(“ruta”) → crear una carpeta en la ruta indicada (“../escritorio/carrete”)
+os.chdir (“ruta”) → nos permite movernos de carpeta hasta la ruta indicada.
+
+>> import os
+>>> import glob
+>>> os.listdir()  #te da solo los nombres del archivo
+['Ej1.py', 'Ej3.py', 'archivo2.txt', 'Ej2.py', 'Ej4.py', 'documento.txt', 'Ej5.py'...]
+
+>>> glob.glob("*")  # hace lo mismo que listdir (devuelve una lista con todos los archivos)
+['Ej1.py', 'Ej3.py', 'archivo2.txt', 'Ej2.py', 'Ej4.py', 'documento.txt', 'Ej5.py'...]
+
+>>> glob.glob("*.py")  #se puede poner parámetros, en este caso solo los archivos.py  
+['Ej1.py', 'Ej3.py', 'Ej2.py', 'Ej4.py', 'Ej5.py'...]
+
+Ejercicio de práctica
+Escribir un script en el cual debemos movernos a la carpeta Informes y obtener los archivos *.txt que hayan allí. Por cada archivo hay que obtener, por un lado, cuántas veces aparece la palabra "estado" y por otro lado la cantidad de líneas. Por último, hay que crear una carpeta que se llame Apellidos, donde hay que crear un archivo llamado Lista.txt que contenga en cada línea la primer línea de cada archivo .txt obtenidos anteriormente.
+
+
+contador = 0 
+for i in files:
+if (i==”Estado”):
+contador = contador + 1 
+
+
+print contador
+Clase 3 - practica - 31/3
+Uso de git
+#!/usr/bin/ env python3 → es para que el intérprete entienda que el lenguaje va a ser python
+
+IMPORTANTE: Siempre que creemos un repositorio hay que seleccionar la casilla de README
+Copiar y pegar todos los archivos de la clase en el repositorio
+
+Settings 
+colaborators
+anadir
+BenitezG
+AJVelezRueda
+
+Para eliminar el archivo desde git se hace 
+$ git rm nombre_del_archivo → add →commit→pull
+Manejo de excepciones
+(https://github.com/AJVelezRueda/Fundamentos_de_informatica/blob/master/Python_intro/Expresiones_regulares.md)
+
+Manejo de errores
+
+Errores de sintaxis —> También conocidos como errores de interpretación (errores en la escritura del código) 
+
+Excepciones —> Los errores detectados durante la ejecución
+Ej: ZeroDivisionError, NameError, Type error 
+
+>>> 3 / 0
+      Traceback (most recent call last):
+        File "<stdin>", line 1, in <module
+      ZeroDivisionError: division by zero
+
+Prever errores:
+try:
+          # aquí ponemos el código que puede lanzar excepciones 
+      except:
+          # entrará aquí en caso que se haya producido una excepción 
+
+Excepciones personalizadas —> raise
+def check_int_type():
+        if type(x)  != int:
+          raise TypeError("Only integers”)
+
+
+Clase 4 - teoria - 09/4 - Expresiones regulares
+Phyton avanzado (https://github.com/AJVelezRueda/Fundamentos_de_informatica/blob/master/Python_intro/Manejo_excepciones.md)
+
+* Los archivos que empiezan con punto están ocultos 
+.gitignore → para no subir ciertos archivos a github. Dentro de ese archivo escribir los nombres de los archivos o carpetas que no quiero subir.
+
+Secuencias de escape:
+
+
+
+Expresiones regulares → son patrones de texto expresado en código. Son cadenas de caracteres basadas en reglas sintácticas, que permiten describir secuencias de caracteres. 
+Son una herramienta poderosa a la hora de hacer búsquedas sofisticadas en Strings de forma simple.
+Sirven para hacer búsquedas muy especificas de texto o un patrón de texto 
+Se usa para validación de cosas . Ej: Para saber si un email es válido o no, una tarjeta.
+
+Es necesaria la librería RE (regular expressions)
+
+Metacaracteres —> Son caracteres especiales que, dependiendo del contexto, tienen un significado especial para las expresiones regulares.
+
+Metacaracteres Delimitadores: nos permitirán delimitar dónde queremos buscar los patrones de búsqueda.
+
+
+Metacaracteres cuantificadores:  permite repetir cierta cantidad de veces una búsqueda dada
+
+ {} → cuantas veces tiene que aparecer ese patrón
+
+
+Rangos —> son una clase de caracteres abreviada que se crea escribiendo el primer carácter del rango, un guión y el último carácter del rango
+El rango [a-d] equivale al [abcd]
+El rango [aA-zZ] equivale a buscar desde la a a la z tanto mayus como minus.
+El rango [1-10] equivale al substring [12345678910]
+El rango [Dd] equivale a buscar una D mayúscula y una d minúscula
+
+Podemos listar caracteres que no deben aparecer utilizando el ^. Así, por ejemplo, el rango [^a-d] coincide con cualquier carácter que no sea abcd.
+
+Coincidencias o matches 
+
+>>> import re
+>>> texto = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet et amet."
+>>> patron = "amet"
+>>> re.search/match(patron, texto) → en el patrón puedo poner un string o un expresión regular para eso le pongo una r antes.
+
+La función match() busca el patrón y devuelve la primera aparición y solo al principio de la cadena. Si se encuentra una coincidencia en la primera línea, devuelve el objeto de coincidencia. Pero, si se encuentra una coincidencia en alguna otra línea, devuelve un valor nulo.
+Clase 4 - práctica - 12/4
+bool (4) = True
+bool (None) = False
+
+Si el “piquito” está dentro del rango está negando ese rango si está afuera es el inicio de línea
+
+Todos los patrones en Expresiones regulares son strings
+
+Los metacaracteres solo afectan a las cosas que tengan a la izq
+
+he* → el * solo afecta a la e 
+(he)* → afecta a la h y a la e 
+
+En E.R es importante entender las consignas 
+
+(.*?) → el signo de pregunta hace que sea más precisa la búsqueda
+
+La función split() sirve para: dividir una cadena de caracteres en una lista de cadenas más pequeñas. Por defecto, split() divide la cadena en espacios en blanco y devuelve una lista con cada palabra en la cadena.
+
+Clase 5 - teoría - 13/4 - POO
+Paradigmas de programación - Introducción a la programación con objetos:
+https://github.com/AJVelezRueda/Fundamentos_de_informatica/blob/master/POO/Teoria/Introducci%C3%B3n_a_POO.md
+
+Paradigmas de Programación → Es un conjunto de ideas que describe una forma de entender la construcción de un programa. Estas ideas nos permiten pensar y estructurar el código de distintas forma.
+Scripting → programar de forma imperativa, dando ordenes
+
+Programación orientada a objetos → Es una forma de pensar los programas en la cual se estructura un programa construyendo piezas simples y reutilizables de código para crear instancias individuales de objetos.
+
+Objetos y mensajes Un objeto es un ente computacional con el que podemos comunicarnos mediante mensajes y puede (o no) tener un estado interno (referencias a otros objetos). Pueden interactuar entre sí
+Las características que lo hacen un objeto en particular son sus atributos. 
+
+ Los objetos pueden tener estado, el cual puede cambiar a lo largo del tiempo. El estado es el conjunto de atributos de un objeto.  Cada vez que un objeto recibe un mensaje, hace algo, reaccionando al mismo. Por tanto, decimos que los objetos tienen un cierto comportamiento 
+Ambiente → Contexto en el que el viv en los objetos, tienen su estado y pueden entender mensajes. En un mismo ambiente podemos contar con varios objetos
+
+Interfaz → Conjunto de mensajes que cada objeto expone, puede ser (y típicamente será) diferente para cada objeto.
+
+Polimorfismo → Objetos que comparten su interfaz son polimórficos. Puede ser parcial cuando comparten parte de su interfaz y cuando comparten todo son polimórficos. Para ver poliformismo se necesita un observador u otro actor.
+
+Clases → “moldes” que sirven para dar vida a objetos que se comporten de igual forma. Se ponen siempre con mayuscula
+
+Instanciación → Acto de crear un objeto a partir de una clase. Y a los objetos también se los denomina instancias (de una clase particular). Por ejemplo, pepita es una instancia (de la clase Golondrina).Es un ej, un caso concreto/particular
+
+Se escribe mediante la palabra reservada class, seguida de un nombre y :. Dentro de ella encontraremos los métodos, que son el código que especifica cómo se comportará un objeto cuando reciba un mensaje. Ej:
+class Golondrina:
+  def __init__(self, energia):
+    self.energia = energia
+
+Métodos vs Funciones:
+class Golondrina: #siempre en mayus el nombre de la clase
+  def comer_alpiste(self, gramos):
+    self.energia = self.energia + 4 * gramos
+Las funciones se invocan como función(argumentos), pero los métodos se evalúan a través el envío de mensajes como objeto.mensaje(argumentos)
+Los métodos siempre declaran como primer parámetro self, las funciones no
+Los métodos siempre van dentro de un clase, mientras que las funciones van por fuera
+Un método es la descripción de qué hacer cuando se recibe un mensaje del mismo nombre. El conjunto de estos métodos provee de comportamiento a las instancias de una clase.
+
+Tareas: Hacer que las golondrinas entiendan el mensaje esta_feliz(), y que devuelva si está feliz (que es cuando tienen de energía más de 50) y para los dragones, implementar ese método, pero están felices cuando tienen más de 500 de energía. Y el capítulo 1,2 y 3 de Mumuki (objetos)
+Mumuki (POO):
+Clase 1 
+Dos referencias son idénticas si apuntan al mismo objeto y para saberlo contamos con el operador is, o =.
+Las funciones retornan un valor mientras que los procedimientos tienen un efecto, es decir, modifican algo.
+celular_de_eli.tiene_bateria_maxima()
+False
+ celular_de_eli.cargar_a_tope()
+ celular_de_eli.tiene_bateria_maxima()
+True
+Clase 2
+Los objetos tienen: una interfaz, es decir, el conjunto de mensajes que entiende; un estado, es decir, los atributos que posee.
+Al programar con objetos cuando les enviamos mensajes, cada objeto le pregunta qué hacer a su clase. Este concepto es conocido como method lookup, que en castellano sería algo así como "búsqueda del método"
+Clase 3 
+Excepciones: 
+raise Exception('Este es el mensaje de la excepción que estamos lanzando')
+Para que dos métodos sean polimórficos no alcanza con que tengan el mismo nombre, también necesitamos que tengan los mismos parámetros. Por eso a veces se fuerza
+
+
+Clase 5 - práctica - 19/4 - POO
+https://github.com/AJVelezRueda/Fundamentos_de_informatica/tree/master/POO/Practica
+
+Es importante agregar modificadores a los rangos para que no solo busque caracteres sino “palabras”
+[a-z] un caracter
+[a-z]+ uno o mas caracteres
+= → asignar valor
+== → igualar
+
+
+Polimorfismo: Cuando una clase puede mandar un mismo mensaje a distintos objetos. La clase que envía el mensaje debe ser una, y al menos 2 que lo reciban.
+
+PREGUNTA DE EXÁMEN
+¿Qué es el polimorfismo?
+Atributo → Siempre van a tener el self adelante. Siempre se definen/construyen en el init. No son lo mismo que parámetros
+Estado → Conjunto de atributos
+Parámetros → son los que están incluidos entre paréntesis
+Interfaz → 
+class Golondrina:
+  def __init__(self, energia, altura):  #parámetros (energía, altura)self no cuenta conceptualmente como parámetro
+    self.energia = energia #argumento (self.energía, self.altura)
+    self.altura = 0
+# el estado es self.energía y self.altura
+
+Para que sean polimórficas 2 clases, necesito de una tercera que haga que las dos anteriores compartan un mensaje.
+
+
+El __init__ es un constructor, un inicializador, no un método.
+Los objetos tienen atributos y al conjunto de los mismos se los denomina estado. Los atributos también son objetos y nos permiten guardar valores y representar características del objeto que los posea.
+__init__ viene de la palabra en inglés initialize que en castellano es inicializar. Es lo que se conoce como el constructor de una clase y nos permite darle valores iniciales a los atributos de sus instancias a la hora de crearlas. 
+self es un primer parámetro obligatorio que nos permite acceder a los atributos del objeto que estamos instanciando. 
+Un método es la descripción de qué hacer cuando se recibe un mensaje del mismo nombre. El conjunto de estos métodos provee de comportamiento a las instancias de una clase.
+Clase 6 - teoría - 21/4 - POO - Herencia y Colecciones
+Diferencia entre un método y un procedimiento. El método puede retornar o no valores. 
+
+Las funciones retornan un valor mientras que los procedimientos tienen un efecto, es decir, modifican algo.
+La herencia nos permite que las subclases (Condor y Halcon) posean los mismos métodos y atributos que la superclase Ave. Es decir, las instancias de Condor y de Halcon van a saber volar de la misma forma, pero cuando les enviemos el mensaje dormir cada una hará algo diferente.
+class Ave:
+  def __init__(self, energia):
+    self.energia = energia
+  def volar(self):
+    self.energia -= 20
+class Condor(Ave):
+  def dormir(self,minutos):
+   self.energia += minutos * 3
+class Halcon(Ave):
+  def dormir(self,minutos):
+   self.energia += minutos
+
+
+2 Tipos de clases: Abstractas (no se instancian) y Concretas
+Cuando dos o más objetos repiten lógica, creamos una clase con el comportamiento en común →  la llamaremos superclase. Llevará los métodos repetidos de las clases originales (subclases) y haremos que estas últimas hereden de ella. De esta forma, las subclases que heredan de la superclase sólo tendrán definido su comportamiento particular. 
+A este tipo de clases, como Dispositivo o Ave, se las llama clases abstractas porque, a diferencia de las clases concretas (como Tablet o Notebook), nunca las instanciamos. En otras palabras, no creamos objetos con esa clase, solo nos sirven para proveer comportamiento a sus subclases. 
+Las superclases NO son objetos? 
+A pesar de ello, una subclase puede heredar de una clase abstracta tanto como de una concreta.
+Se redefinen los métodos cuando se heredan de una superclase pero queremos que actúen de otra forma
+Usar super: cuando una subclase lo envía, se evalúa el método del mismo nombre de su superclase.
+Las listas por comprensión son una herramienta que nos permite hacer mapeos y/o filtrados sobre una lista. Por ejemplo, si quisiéramos obtener el doble de los números mayores a 5 de una lista números podríamos hacer:
+[número * 2 for numero in numeros if numero > 5]
+
+
+
+
+
+Secuencia de escape	representación
+\n	salto de línea
+\t	Tab o cambio de pestaña
+\s	espacio
+'	Comillas simples
+"	Comillas dobles
+2. ¿Qué son las expresiones regulares?
+Las expresiones regulares son cadenas de caracteres basadas en reglas sintácticas, que permiten describir secuencias de caracteres. Es decir es un criterio para buscar, capturar o reemplazar texto utilizando patrones. Estas son una herramienta poderosa a la hora de hacer búsquedas sofisticadas en Strings de forma simple.
+
+Las expresiones regulares se pueden concatenar para formar nuevas expresiones regulares; si, por ejemplo, A y B son expresiones regulares, AB también es una expresión regular.
+
+Para pensar 🤔: ¿Qué usos crees que podemos darle a las expresiones regulares? Proponé una aplicación concreta para tu carrera/disciplina.
+
+3. Metacaracteres
+Los metacaracteres son caracteres especiales que, dependiendo del contexto, tienen un significado especial para las expresiones regulares.
+
+Existen lo que se conoce como metacaracteres delimitadores, que nos permitirán delimitar dónde queremos buscar los patrones de búsqueda. Entre ellos tenemos:
+
+Metacaracter	Significado
+^	Inicio de línea
+$	Fin de linea
+\A	Inicio de texto
+\Z	Fin de texto
+.	Coincide con cualquier caracter en una línea dada
+Para pensar 🤔: Dado el siguiente texto:
+
+texto = 'Esta es la linea uno\npalabra en la linea dos\n'
+¿Cómo crees que darán las siguientes búsquedas?
+
+expresion regular a: '^palabra'
+
+expresion regular b: '\Apalabra'
+
+expresion regular c: 'palabra$'
+
+expresion regular d: 'palabra\Z'
+
+Ya vimos que en programación suele ser útil repetir la ejecución de porciones de código. Las expresiones regulares nos permiten no solo delimitar la porción de texto donde deseamos buscar, sino que también permite repitir cierta cantidad de veces una busqueda dada. Para ello se utilizan los metacaracteres cuantificadores:
+
+Metacaracter	Significado
+*	Cero o más: todas las ocurrencias de un dado substring
++	Una o más ocurrencias del patrón
+?	Cero o una
+{n}	Exactamente n veces
+{n,m}	Por lo menos n pero no más de m veces.
+Para pensar 🤔: ¿Qué significará la expresión regular "X(.*)Y"? Ennumera algunas de las posibles strings que cumplen con dicha condición.
+
+🧗‍♀️ Desafío I: ¿Construí la expresión regular que obtenga al menos 4 dígitos?
+
+🧗‍♀️ Desafío II: ¿Construí la expresión regular que obtenga al entre 3 y 6 letras minúsculas?
+
+🧗‍♀️ Desafío III: ¿Construí la expresión regular que obtenga todas las apariciones del patrón ab en un string?
+
+Respuestas
+Para pensar 🤔: ¿Existe una única respuesta para los ejercicios? ¿Qué otras alternativas se te ocurren?
+
+Los dígitos entre llaves de la forma {n,m}, especifican el mínimo número de ocurrencias en n y el máximo en m.
+
+Existen tambien metacaracteres predefinidos, que nos facilitan el uso de las expresiones regulares:
+
+Metacaracter	Significado
+\w	Caracter alfanumércio
+\W	Caracter NO alfanumércio
+\d	Caracter numércio
+\D	Caracter NO numércio
+\s	Un espacio, de cualquier tipo (\t\n\r\f)
+\S	Cualquier caracter que no sea un espacio
+Como ya hemos visto, estos metacaracteres puden combinarse para lograr expresiones regulares complejas.
+
+🧗‍♀️Desafio IV: ¿Qué expresión regular usarías para extraer el número de estudiantes que hay en una clase según el siguiente texto:
+
+texto = 'En la clase de Introducción a la programación hay 30 estudiantes' 
+Respuestas
+Rangos
+
+Un rango es una clase de caracteres abreviada que se crea escribiendo el primer caracter del rango, un guión y el último caracter del rango. Sirve para listar un conjunto de caracteres de interés, de este modo se encontrará uno cualquiera de los caracteres de la lista. Por ejemplo:
+
+- El rango [a-d] equivale al [abcd]
+- El rango [1-10] equivale al substring [12345678910]
+- El rango [Dd] equivale a buscar una D mayúscula y una d minúscula
+Así como podemos listar los caracteres posibles en cierta posición de la cadena, también podemos listar caracteres que no deben aparecer utilizando el ^. Así, por ejemplo rango [^a-d] coincide con cualquier caracter que no sea abcd.
+
+4. Expresiones regulares en Python
+Para trabajar con expresiones regulares en Python, es necesaria la librería RE, que puede ser instalada usando el instalador de Python (PIP):
+
+pip install re
+De todos modos, antes de instalar una librería siempre es importante comprobar si esta está o no instalada. Para ello, desde una terminal de Python debemos escribir:
+
+import re
+Si la librería está instalada no nos aparecerá ningún error.
+
+5. Coincidencias o Matches
+Comenzaremos por aprender sobre las expresiones regulares más simples posibles. Dado que las expresiones regulares se utilizan para operar en strings, vamos a empezas con la tarea más común: los caracteres coincidentes.
+
+Si un String se corresponde con el criterio que define una expresión regular, se dice que el String hace match con la expresión, y equivalentemente, se dice que la expresión acepta al String.
+
+Podemos encontrar patrones en un texto con el función search:
+
+>>> import re
+>>> texto = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet et amet."
+>>> patron = "amet"
+>>> re.search(patron, texto)
+Para pensar 🤔: ¿Qué resultado obtenemos al ejecutar en la última linea?
+
+🧗‍♀️Desafio V: imprimí el fragmento del texto entre la posición 22 y 26 ¿Qué resultado obtenés? ¿Qué quiere decir el mensaje span?
+
+Ahora veamos qué hace match():
+
+>>> import re
+>>> texto = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet et amet."
+>>> patron = "amet"
+>>> re.match(patron, texto)
+Para pensar 🤔: ¿Qué resultado obtenemos con search()?¿Qué diferencias observan con match()?
+
+Detalles
+Vamos a ejecutar la última linea con una modificación:
+
+>>> import re
+>>> texto = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet et amet."
+>>> patron = "amet"
+>>> re.search(patron, texto).group()
+Para pensar 🤔: ¿Qué resultado obtenemos? ¿Para qué sirve la función group()?
+
+Utilicemos ahora otro método que nos permita obtener todas las ocurrencias del substring "amet"
+
+>>> re.findall(patron, texto)
+Para pensar 🤔: ¿Qué resultado obtenemos?
+
+🧗‍♀️Desafio VI: Expresá el patron de búsqueda utilizando lo visto anteriormente sobre metacaracteres y rangos.
+
+Como vimos hasta acá el método group() sirve para mostrar el resultado de una búsqueda, pero veamos:
+
+>>> import re
+>>> texto = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet et amet."
+>>> patron = "amet"
+>>> re.search(patron, texto).group()
+'amet'
+>>> re.search(patron, texto).group(0)
+'amet'
+El método group() (o group(0)) nos devuelve la coincidencia. Sin embargo si lo que se quiere no es encontrar un patrón en particular, sino obtener lo que está dentro de cierto patrón (por ejemplo lo que hay entre ciertas palabras) hay que modificar el patrón. Vamos a ver el siguiente ejemplo:
+
+>>> import re
+>>> texto = "Lorem ipsum dolor sit amet, consectetur ipsum elit. Amet sit amet."
+>>> patron = "ipsum(.*)sit"
+>>> re.search(patron, texto).group()
+'ipsum dolor sit amet, consectetur ipsum elit. Amet sit'
+>>> re.search(patron, texto).group(0)
+'ipsum dolor sit amet, consectetur ipsum elit. Amet sit'
+>>> re.search(patron, texto).group(1)
+' dolor sit amet, consectetur ipsum elit. Amet '
+Acá se utilizaron algunos metacaracteres, como lo son el punto (.) para indicar que puede ser cualquier carácter, y el asterísco (*) para indicar que puede haber 0 o más de estos caracteres. De esta manera obtenemos como resultado lo que se encuentre entre las palabras "ipsum" y "sit", sin embargo observen dos cosas. Primero, el string que nos devuelve tiene dentro un substring que debería haber sido encontrado en la búsqueda: "ipsum dolor sit", pero que sin embargo no aparece. Segundo, nuevamente al hacer group() o group(0) obtenemos la coincidencia, pero si nos queremos quedar con el substring que está contenido entre estas palabras debemos utilizar group(1). Ahora bien, como vimos, usar el patrón de búsqueda de esta manera prioriza los matches externos, es decir, busca el primer delimitador ("ipsum" en nuestro caso) y luego abarca todo hasta la última aparición del segundo delimitador ("sit"). Existe una forma de priorizar los matches internos y es con el metacarácter ?:
+
+>>> import re
+>>> texto = "Lorem ipsum dolor sit amet, consectetur ipsum elit. Amet sit amet."
+>>> patron = "ipsum(.*?)sit"
+>>> re.search(patron, texto).group()
+'ipsum dolor sit'
+>>> re.search(patron, texto).group(0)
+'ipsum dolor sit'
+>>> re.search(patron, texto).group(1)
+' dolor  '
+Cuando se quieren obtener todas las apariciones del patrón se utiliza el método findall el cual actúa para cada coincidencia como si devolviera el group(1), es decir devuelve en una lista la parte que se encuentra dentro de los delimitadores.
+
+>>> import re
+>>> texto = "Lorem ipsum dolor sit amet, consectetur ipsum elit. Amet sit amet."
+>>> patron = "ipsum(.*?)sit"
+>>> re.findall(patron, texto)
+[' dolor ', ' elit. Amet ']
+6. Reemplazos o sustituciones masivas
+Ejecutemos ahora la siguiente línea:
+
+>>> re.sub(patron, "###", texto)
+Para pensar 🤔: ¿Qué resultado obtenemos? ¿Para qué sirve la función sub?
+
+La función sub permite reemplazar todos las ocurrencias del patrón por otro patrón en un String.
+

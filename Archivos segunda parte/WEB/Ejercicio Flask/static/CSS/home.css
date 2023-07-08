@@ -1,0 +1,44 @@
+*{margin: 0;
+    padding: 0;
+}
+h1 {
+    font-size: large;
+    font-weight: bold;
+    align-items: right;
+    margin-left: 150px;
+    margin-top: -40px;
+    font-family: "VTV323", monospace;
+    font-size: 50px;
+}
+
+.head {
+    background-color: blueviolet;
+    border: 5px solid black;
+}
+.cuadradito{
+    background-color:yellow;
+    border: 3px solid black;
+    width: 5%;
+    height: 10%;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+.body {
+    background-color: yellow;
+    padding: 0%;
+    border: 5px solid black;
+}
+.tabla1{
+    padding: 0% 75% 70% 75%;
+}
+th, td {
+  border: 1px solid black;
+  padding: 10px;
+}  
+
+.parrafo1{
+    padding: 20px 50px;
+    font-size: 20px;
+    padding-left: 5%;
+    padding-right: 50%;
+}

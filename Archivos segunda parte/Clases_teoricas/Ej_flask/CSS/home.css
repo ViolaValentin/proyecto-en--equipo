@@ -1,0 +1,13 @@
+*{margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: large;
+    font-weight: bold;
+    margin: auto;
+}
+
+.welcome {
+    color: blueviolet;
+}

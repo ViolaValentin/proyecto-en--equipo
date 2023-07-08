@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.menu{
+    background-color: rgb(178, 174, 174);
+    border-bottom: solid black;
+    padding: 10px 40px 40px;
+    margin-top: auto;
+}
+.menues{
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 600;
+    
+}
+h1{
+    text-align: left;
+    font-family: sans-serif;
+    font-size: 40px;
+    padding: 10px;
+    padding-left: 80px;
+    color: #CC0000;
+    font-weight: 900;
+}
+
+.bannerPrincipal{
+    width: 100%;
+    height: 600px;
+    text-align: center;
+    border-bottom: solid black;
+}
+h2{
+    font-family: sans-serif;
+    font-style: italic;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    border-color: black;
+    text-align: center;
+    position: absolute;
+    padding-left: 25%;
+    padding-top: 20%;
+    padding-right: 25%;
+    text-shadow: 2px 2px 2px black;
+}
+
+.logo{
+    text-align: left;
+    height: 60px;
+    width: 60px;
+    margin-top: 0px;
+    margin-bottom: -75px;
+}
+
+.infosection{
+    background-color: rgb(178, 174, 174);
+    margin-top: -10px;
+    padding: 50px;
+    margin-bottom: -100px;
+}
+
+.info1{
+    background-color: white;
+    border-radius: 20px;
+    border: 2px solid black;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+
+.por-que-elegirnos{
+    font-family: sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 30px;
+    margin-top: -35%;
+    margin-left: -5%;
+}
+
+.boton-info-1{
+    border-radius: 20px;
+    text-align: center;
+    background-color: #CC0000;
+    border: 2px solid black;
+    margin-top: 30%;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    padding: 10px;
+    margin-left : 0%;
+}
+
+.p-info-1{
+    text-align: center;
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-size: 20px;
+    margin-top: 20%;
+}
+
+.icono-info-1{
+    width: 54px;
+    height: 54px;
+    background-color: #CC0000;
+    margin-top: -7.5%;
+    border-radius: 20px;
+    border: 2px solid black;
+    margin-left : 45%;
+    
+}
+
+.img-icono-info-1{
+    width: 100%;
+    height: 100%;
+    box-shadow: 5px;
+    align-items: center;
+}
+
+footer{
+    background-color: #CC0000;
+    border-top: 4px solid black;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: white;
+    margin-top: 100px;
+    padding-bottom: 20px;
+}
+.logo-ig{
+    width: 30px;
+    width: 30px;
+    padding-left: 45%;
+    
+}
+.logo-facebook{
+    width: 30px;
+    width: 30px;
+
+}
+.logo-twitter{
+    width: 30px;
+    width: 30px;
+
+}
+
+.containerSection{
+    background-color: rgb(178, 174, 174);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+    gap:10px;
+}

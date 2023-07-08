@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/libreria.css')}}">
+    <title>libreria</title>
+</head>
+<body>
+    <div class="contenedor-violeta">
+        <div class="contenedor-verde">
+            <section class="header">
+                <div class="circulo-rojo"></div>
+                <div class="circulo-amarillo"></div>
+                <div class="circulo-verde"></div>
+                <img class="flecha" src="https://th.bing.com/th/id/R.eaa6947554411934e2de3ba222d2f938?rik=T0QBxFE0LYQm7g&pid=ImgRaw&r=0" alt="">
+            </section>
+            <section class="cuerpo">
+                <h2>EN UN CLICK</h2>
+                <h1>LIBRERIA</h1>
+                <button><a href="{{url_for('get_all_libros')}}">BUSCAR</a></button>
+                <img class="mano-click" src="https://media.giphy.com/media/kcaM13KwypRCYrCD7J/giphy.gif" alt="vew">
+            </section>
+        </div>
+    </div>
+</body>
+</html>

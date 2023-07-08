@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Arcade gamer";
+}
+
+body{
+    background-color:#bdb2ff ;
+    display: flex;
+    justify-content: center;  /* alinea horizontal, solo disponible con display:flex */
+    align-items: center; /* Alinea vertical */
+    height: 100vh; /* 100% vertical height */
+    width: 100vw; /* 100% vertical width */
+}
+
+.contenedor{
+    background-color:#AEF496;
+    border: 3px solid black;
+    width: 70%;
+}
+
+.header{
+    padding:10px 15px;
+    position: relative;
+    display: flex;
+    border-bottom: 3px solid black;
+}
+
+.semaforo{
+    display: flex;
+    gap: 10px;
+}
+
+.circulo-rojo{
+    background-color:#f27070 ;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: 3px solid black;
+}
+
+.circulo-verde{
+    background-color:#9BD5C1 ;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: 3px solid black;
+}
+.circulo-amarillo{
+    background-color:#eeec7c ;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: 3px solid black;
+}
+
+.cuerpo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+    justify-content: center;
+    padding: 36px;
+    position: relative;
+}
+
+h2{
+    font-size: 60px;
+}
+
+h1{
+    font-size: 120px;
+    color: #bdb2ff;
+    -webkit-text-stroke: 4px black;
+    margin-top: 60px;
+}
+
+button{
+    font-size: 40px;
+    padding: 20px;
+    background-color: #71fd7b;
+    border: none;
+    margin-top: 60px;
+}
+
+.click{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    bottom: -120px;
+    left: 44%;
+}
+
+.flecha{
+    position: absolute;
+    width: 300px;
+    right: -125px;
+    top:40px;
+}

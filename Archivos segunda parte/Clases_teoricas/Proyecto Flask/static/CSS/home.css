@@ -1,0 +1,51 @@
+*{margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: blueviolet;
+    
+}
+
+section{
+    background-color: yellowgreen;
+}
+
+.welcome {
+    background-color: aqua;
+    padding: 20px 20px 20px 20px;
+    color: green;
+}
+
+.about{
+    background-color: beige;
+}
+
+
+.welcome p:hover{
+    color: chocolate;
+}
+
+h2 {
+    font-size: 22;
+    color: green;
+}
+
+button{
+    border: 5;
+    margin: 2px;
+    padding: 30px 30px;
+    font-style: oblique;
+    color: yellow;
+    font-size: 22;
+    background-color: beige;
+    color: tomato;
+}
+
+footer{
+    background-color: beige;
+}
+
+.welcome img{
+    width: 100%;
+}

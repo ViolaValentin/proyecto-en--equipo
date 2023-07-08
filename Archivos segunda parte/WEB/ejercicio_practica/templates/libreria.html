@@ -1,0 +1,42 @@
+<!--1) /libros | /libros/id | /libros/new/ para cargar nuevos libros-->
+<!---->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/home.css')}}">
+    <title>Semaforo</title>
+    <style>
+        body{
+            background-color: #BDB2FF;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="header">
+    <div class="semaforo">
+            <div class="circulo-rojo"></div>
+            <div class="circulo-amarillo"></div>
+            <div class="circulo-azul"></div>    
+    </div>       
+            <div class="contendeor-imagen-click">
+                <img class="flecha-click" src="https://i.pinimg.com/originals/80/f7/1e/80f71eb07e5dbaff179a672564174a24.png" alt="">
+            </div>
+    </section>
+    
+       <!-- <a href="{{url_for('get_prenda',id=id)}}">{{prendas.name}}</a>
+        se ejecuta el metodo getprenda si el ID se encuetrnta sen el diccionario, accedo al elemento.
+    -->
+    <section class="fondo-verde">
+        <H2>EN UN CLICK</H2>
+        <H1>LIBRERIA</H1>
+        <div class="contenedor-boton">
+            <Button><a href="{{ url_for('get_all_products') }}">BUSCAR</a></Button>
+            <img class="click" src="https://th.bing.com/th/id/R.79e057aca37b487b01affcc0d788d20e?rik=GeYGa7ill4VgEQ&riu=http%3a%2f%2fwww.muniabancay.gob.pe%2fwp-content%2fuploads%2f2021%2f05%2fclic.gif&ehk=pmsnEmo72dad1NH3M6nCO3Fo66qrWTPBr7UCLxi4CWI%3d&risl=&pid=ImgRaw&r=0" alt="">  
+        </div>
+        
+    </section>
+</body>
+</html>

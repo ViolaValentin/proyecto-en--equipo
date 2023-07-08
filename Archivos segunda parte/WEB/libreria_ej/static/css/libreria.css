@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.contenedor-violeta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #bdb2ff;
+    height: 100vh;
+    
+}
+.contenedor-verde{
+
+    background-color: #aef496;
+    border: 3px solid black;
+    width: 120vh;
+}
+
+.header{
+    border-bottom: 3px solid black;
+    display: flex;
+    gap: 5px;
+    padding: 10px;
+}
+
+.circulo-rojo{
+    width: 54px;
+    height: 54px;
+    background-color: #f27070;
+    border-radius: 50px;
+    border: 3px solid black;
+}
+.circulo-amarillo{
+    width: 54px;
+    height: 54px;
+    background-color: #eeec7c;
+    border-radius: 50px;
+    border: 3px solid black;
+}
+.circulo-verde{
+    width: 54px;
+    height: 54px;
+    background-color: green;
+    border-radius: 50px;
+    border: 3px solid black;
+}
+.cuerpo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Arcade gamer";
+    padding: 20px;
+    padding-bottom: 0;
+}
+h2{
+    font-size: 60px;
+    padding: 20px;
+}
+h1{
+    color: #E5B2F1;
+    font-size: 120px;
+    -webkit-text-stroke: 5px black;
+    padding: 20px;
+}
+button{
+    border: none;
+    font-size: 40px;
+    background-color: #71fd7b;
+    padding: 10px;
+    
+}
+.mano-click{
+    width: 200px;
+    position: relative;
+    top: -50px;
+    margin-bottom: -100px;
+}
+
+.flecha{
+    width: 400px;
+    position: absolute;
+    right: 200px;
+    top: 100px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
