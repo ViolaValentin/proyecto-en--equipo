@@ -153,7 +153,8 @@ h1{
 }
 .boton-descuento{
     border-radius: 30px;
-    background-color: #4b0082;
+    background: linear-gradient(to bottom right, #4b0082, #800080);;
+    border: none;
     color: white;
     padding: 1vh;
 }
@@ -162,26 +163,65 @@ h1{
     margin-top: 10vh;
     background-image: url("../static/img/vds.png");
     display: flex;
-    justify-content: center;
-    height: 50vh;
-    
+    justify-content: center;    
 }
 .cuadro-ranking{
     width: 75%;
     padding: 4vh;
 }
 .encabezado-cuadro-ranking{
-    background-color: #800080;
+    background: linear-gradient(to bottom right, #4b0082, #800080);;
     height: 10vh;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 4vh;
+    color: white;
 }
 .cuerpo-cuadro-ranking{
     background-color: white;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+td{
+    padding-right: 8vh;
+    padding: 1vh;
+    width: 33%;
+}
+tr{
+    display: flex;
+    justify-content: center;
+    padding: 1vh;
+    margin: 0.5vh;
+    gap: 1vh;
+    border: 2px solid #4b0082;
+    border-radius: 30px;
+}
+.tr-encabezado{
+    background: linear-gradient(to bottom right, #4b0082, #800080);
+    color: white;
+}
+.tr1{
+    box-shadow: 6px 6px 2px 2px gold;
+}
+.tr2{
+    box-shadow: 6px 6px 2px 2px silver;
+}
+.tr3{
+    box-shadow: 6px 6px 2px 2px sienna;
+}
+tbody{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 1vh;
 }
 table{
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
